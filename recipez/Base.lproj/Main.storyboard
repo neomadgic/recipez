@@ -60,6 +60,10 @@
                                         <color key="tintColor" red="0.39661624760000003" green="1" blue="0.58397832169999997" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="e4w-MA-a3w"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="L1Z-dN-NMb"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -78,6 +82,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="ieY-K8-DsD" id="7Jh-75-Lgd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
