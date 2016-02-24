@@ -94,10 +94,10 @@
             </objects>
             <point key="canvasLocation" x="1485" y="429"/>
         </scene>
-        <!--View Controller-->
+        <!--Create RecipeVC-->
         <scene sceneID="fzM-ML-uY4">
             <objects>
-                <viewController id="6aT-9I-bdp" sceneMemberID="viewController">
+                <viewController id="6aT-9I-bdp" customClass="CreateRecipeVC" customModule="recipez" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HfV-ZL-tLJ"/>
                         <viewControllerLayoutGuide type="bottom" id="aN5-73-EJb"/>
@@ -121,19 +121,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rwE-zz-1bW">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pho" translatesAutoresizingMaskIntoConstraints="NO" id="rwE-zz-1bW">
                                 <rect key="frame" x="213" y="252" width="175" height="175"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="175" id="2JZ-vm-UMy"/>
                                     <constraint firstAttribute="height" constant="175" id="x5t-xd-6kF"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rc6-Fc-DiB">
-                                <rect key="frame" x="213" y="252" width="175" height="175"/>
-                                <state key="normal" title="ADD IMAGE">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWV-jc-tx1">
                                 <rect key="frame" x="245" y="454" width="111" height="35"/>
                                 <constraints>
@@ -142,6 +136,12 @@
                                 </constraints>
                                 <state key="normal" title="Create Recipe">
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rc6-Fc-DiB">
+                                <rect key="frame" x="213" y="252" width="175" height="175"/>
+                                <state key="normal" title="ADD IMAGE">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
                         </subviews>
@@ -166,6 +166,13 @@
                             <constraint firstItem="zbx-F2-7CD" firstAttribute="leading" secondItem="hff-YJ-DAK" secondAttribute="leadingMargin" id="vod-z4-Qdx"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="createRecipeBtn" destination="xWV-jc-tx1" id="Sjt-ZG-qMz"/>
+                        <outlet property="recipeImg" destination="rwE-zz-1bW" id="Cod-5Q-Z2J"/>
+                        <outlet property="recipeIngredients" destination="OCW-NA-voH" id="MVq-AL-GeL"/>
+                        <outlet property="recipeSteps" destination="ZHE-LA-Lrd" id="PjM-Cw-D5d"/>
+                        <outlet property="recipeTitle" destination="zbx-F2-7CD" id="3nV-Hx-Lah"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B1w-rM-3C1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
