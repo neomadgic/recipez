@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="89" id="A8Q-2H-fWt">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecipeCell" rowHeight="89" id="A8Q-2H-fWt" customClass="RecipeCell" customModule="recipez" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="600" height="89"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="A8Q-2H-fWt" id="LaL-R3-LAQ">
@@ -58,6 +58,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="tintColor" red="0.39661624760000003" green="1" blue="0.58397832169999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="recipeImg" destination="WZ6-eE-xmP" id="sdk-EV-Jbl"/>
+                                            <outlet property="recipeTitle" destination="bgV-fA-AY7" id="gYL-U6-fo0"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
