@@ -5,6 +5,7 @@
 //  Created by Vu Dang on 2/22/16.
 //  Copyright © 2016 Vu Dang. All rights reserved.
 //
+// REMEMBER TO GIVE CREDIT TO ICON54 FROM NOUNPROJECT FOR ICON USE
 
 import UIKit
 import CoreData
