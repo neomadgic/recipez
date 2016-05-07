@@ -63,6 +63,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        performSegueWithIdentifier("goToRecipe", sender: recipes[indexPath.row])
+    }
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int
     {
         return 1
@@ -71,6 +76,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return recipes.count
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if segue.identifier == "goToRecipe"
+        {
+            if let recipeViewC = segue.destinationViewController as? RecipeVC
+            {
+                if let theRecipe = sender as? Recipe
+                {
+                    recipeViewC.recipeName = theRecipe.title!
+                    recipeViewC.recipeSteps = theRecipe.steps!
+                    recipeViewC.recipeIngred = theRecipe.ingredients!
+                    recipeViewC.recipeImage = theRecipe.image!
+                }
+            }
+        }
     }
 
 }
