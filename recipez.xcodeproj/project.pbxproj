@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7629E16E1CE2443E00DB25C3 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7629E16D1CE2443E00DB25C3 /* MaterialView.swift */; };
 		7659208C1C7E5DE7005F3B13 /* CreateRecipeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7659208B1C7E5DE7005F3B13 /* CreateRecipeVC.swift */; };
 		766237441C7D34B700C0BC11 /* Recipe+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766237421C7D34B700C0BC11 /* Recipe+CoreDataProperties.swift */; };
 		766237451C7D34B700C0BC11 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766237431C7D34B700C0BC11 /* Recipe.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7629E16D1CE2443E00DB25C3 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		7659208B1C7E5DE7005F3B13 /* CreateRecipeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateRecipeVC.swift; sourceTree = "<group>"; };
 		766237421C7D34B700C0BC11 /* Recipe+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Recipe+CoreDataProperties.swift"; path = "../Recipe+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		766237431C7D34B700C0BC11 /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Recipe.swift; path = ../Recipe.swift; sourceTree = "<group>"; };
@@ -50,6 +52,7 @@
 		7662373F1C7D342000C0BC11 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7629E16D1CE2443E00DB25C3 /* MaterialView.swift */,
 				766237421C7D34B700C0BC11 /* Recipe+CoreDataProperties.swift */,
 				766237431C7D34B700C0BC11 /* Recipe.swift */,
 				766237481C7D393600C0BC11 /* RecipeCell.swift */,
@@ -179,6 +182,7 @@
 				76F258E11C7BBAB300E3ACC4 /* ViewController.swift in Sources */,
 				766237441C7D34B700C0BC11 /* Recipe+CoreDataProperties.swift in Sources */,
 				7681CC1A1CDE416400A5DE6D /* RecipeVC.swift in Sources */,
+				7629E16E1CE2443E00DB25C3 /* MaterialView.swift in Sources */,
 				76F258DF1C7BBAB300E3ACC4 /* AppDelegate.swift in Sources */,
 				766237491C7D393600C0BC11 /* RecipeCell.swift in Sources */,
 				7659208C1C7E5DE7005F3B13 /* CreateRecipeVC.swift in Sources */,

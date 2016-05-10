@@ -20,7 +20,7 @@ class RecipeVC: UIViewController
     var recipeSteps = ""
     var recipeIngred = ""
     var recipeImage: NSData!
-    
+
     
     override func viewDidLoad()
     {
@@ -32,6 +32,8 @@ class RecipeVC: UIViewController
     override func viewWillAppear(animated: Bool)
     {
         nameLbl.text = recipeName
+        nameLbl.sizeToFit()
+        nameLbl.alpha = 1.0
         stepsLbl.text = recipeSteps
         ingredLbl.text = recipeIngred
         recipeImg.image = UIImage(data: recipeImage)
