@@ -67,4 +67,14 @@ class CreateRecipeVC: UIViewController, UIImagePickerControllerDelegate, UINavig
             }
     }
     
+    @IBAction func addIngredPressed(sender: AnyObject)
+    {
+        
+    }
+    
+    @IBAction func addStepPressed(sender: AnyObject)
+    {
+        
+    }
+    
 }

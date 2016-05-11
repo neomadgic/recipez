@@ -314,6 +314,9 @@
                                 <state key="normal" title="Add">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addIngredPressed:" destination="6aT-9I-bdp" eventType="touchUpInside" id="jfT-eE-lGc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WUs-AE-jxf" customClass="MaterialButton" customModule="recipez" customModuleProvider="target">
                                 <rect key="frame" x="485" y="178" width="95" height="30"/>
@@ -322,6 +325,9 @@
                                 <state key="normal" title="Add">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addStepPressed:" destination="6aT-9I-bdp" eventType="touchUpInside" id="auH-V6-Rhk"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.9471153846" green="0.9471153846" blue="0.9471153846" alpha="1" colorSpace="calibratedRGB"/>
