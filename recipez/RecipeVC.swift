@@ -15,6 +15,7 @@ class RecipeVC: UIViewController
     @IBOutlet weak var stepsLbl: UILabel!
     @IBOutlet weak var ingredLbl: UILabel!
     @IBOutlet weak var recipeImg: UIImageView!
+    @IBOutlet weak var nameView: MaterialView!
     
     var recipeName = ""
     var recipeSteps = ""
@@ -31,6 +32,7 @@ class RecipeVC: UIViewController
 
     override func viewWillAppear(animated: Bool)
     {
+        nameView.alpha = 0.8
         nameLbl.text = recipeName
         nameLbl.sizeToFit()
         nameLbl.alpha = 1.0

@@ -237,6 +237,7 @@
                     <connections>
                         <outlet property="ingredLbl" destination="bo7-hs-95e" id="grc-vG-cnd"/>
                         <outlet property="nameLbl" destination="qM1-Gq-kfE" id="BIP-5p-zsc"/>
+                        <outlet property="nameView" destination="yzN-Rr-g8B" id="27R-6f-S82"/>
                         <outlet property="recipeImg" destination="e95-FL-KlN" id="cQ0-WR-4L7"/>
                         <outlet property="stepsLbl" destination="g3y-2z-AzH" id="oM0-Np-hHf"/>
                     </connections>
@@ -263,12 +264,12 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Recipe Ingredients" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OCW-NA-voH">
-                                <rect key="frame" x="20" y="135" width="560" height="30"/>
+                                <rect key="frame" x="20" y="135" width="457" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Recipe Steps" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZHE-LA-Lrd">
-                                <rect key="frame" x="20" y="180" width="560" height="30"/>
+                                <rect key="frame" x="20" y="180" width="457" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -279,14 +280,15 @@
                                     <constraint firstAttribute="height" constant="175" id="x5t-xd-6kF"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWV-jc-tx1">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWV-jc-tx1" customClass="MaterialButton" customModule="recipez" customModuleProvider="target">
                                 <rect key="frame" x="245" y="454" width="111" height="35"/>
+                                <color key="backgroundColor" red="0.85882352939999995" green="0.92156862750000001" blue="0.78039215689999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="111" id="Tx2-IA-c41"/>
                                     <constraint firstAttribute="height" constant="35" id="fDe-4K-h2A"/>
                                 </constraints>
                                 <state key="normal" title="Create Recipe">
-                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="createRecipePressed:" destination="6aT-9I-bdp" eventType="touchUpInside" id="TQh-QL-AfY"/>
@@ -295,32 +297,62 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rc6-Fc-DiB">
                                 <rect key="frame" x="213" y="252" width="175" height="175"/>
                                 <state key="normal" title="ADD IMAGE">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="addImgPressed:" destination="6aT-9I-bdp" eventType="touchUpInside" id="bdg-76-mO7"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZx-sB-4lR" customClass="MaterialButton" customModule="recipez" customModuleProvider="target">
+                                <rect key="frame" x="485" y="135" width="95" height="30"/>
+                                <color key="backgroundColor" red="0.85882352939999995" green="0.92156862750000001" blue="0.78039215689999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Nep-OS-bDu"/>
+                                    <constraint firstAttribute="width" constant="95" id="tI0-hF-gAB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WUs-AE-jxf" customClass="MaterialButton" customModule="recipez" customModuleProvider="target">
+                                <rect key="frame" x="485" y="178" width="95" height="30"/>
+                                <color key="backgroundColor" red="0.85882352939999995" green="0.92156862750000001" blue="0.78039215689999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.9471153846" green="0.9471153846" blue="0.9471153846" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="OCW-NA-voH" firstAttribute="leading" secondItem="hff-YJ-DAK" secondAttribute="leadingMargin" id="0kF-sx-M6o"/>
                             <constraint firstItem="zbx-F2-7CD" firstAttribute="trailing" secondItem="hff-YJ-DAK" secondAttribute="trailingMargin" id="2Jw-YV-U9r"/>
                             <constraint firstItem="xWV-jc-tx1" firstAttribute="top" secondItem="Rc6-Fc-DiB" secondAttribute="bottom" constant="27" id="3TC-8f-mAc"/>
-                            <constraint firstItem="OCW-NA-voH" firstAttribute="trailing" secondItem="hff-YJ-DAK" secondAttribute="trailingMargin" id="4pJ-DA-sZe"/>
                             <constraint firstItem="Rc6-Fc-DiB" firstAttribute="centerX" secondItem="rwE-zz-1bW" secondAttribute="centerX" id="947-YQ-k9z"/>
                             <constraint firstItem="ZHE-LA-Lrd" firstAttribute="leading" secondItem="hff-YJ-DAK" secondAttribute="leadingMargin" id="ACA-8N-GSY"/>
-                            <constraint firstItem="ZHE-LA-Lrd" firstAttribute="trailing" secondItem="hff-YJ-DAK" secondAttribute="trailingMargin" id="CZz-Qj-zbv"/>
+                            <constraint firstItem="ZZx-sB-4lR" firstAttribute="leading" secondItem="OCW-NA-voH" secondAttribute="trailing" constant="8" id="BB6-ZH-HSo"/>
                             <constraint firstItem="xWV-jc-tx1" firstAttribute="centerX" secondItem="hff-YJ-DAK" secondAttribute="centerX" id="DCi-YJ-WMT"/>
                             <constraint firstItem="OCW-NA-voH" firstAttribute="top" secondItem="zbx-F2-7CD" secondAttribute="bottom" constant="14" id="EDu-BF-CcC"/>
+                            <constraint firstItem="WUs-AE-jxf" firstAttribute="width" secondItem="ZZx-sB-4lR" secondAttribute="width" id="EZ7-HR-tLp"/>
+                            <constraint firstItem="WUs-AE-jxf" firstAttribute="leading" secondItem="ZHE-LA-Lrd" secondAttribute="trailing" constant="8" id="IoK-mw-Mah"/>
                             <constraint firstItem="rwE-zz-1bW" firstAttribute="top" secondItem="ZHE-LA-Lrd" secondAttribute="bottom" constant="42" id="JGa-xZ-DlQ"/>
                             <constraint firstItem="ZHE-LA-Lrd" firstAttribute="top" secondItem="OCW-NA-voH" secondAttribute="bottom" constant="15" id="Jz8-pa-EMA"/>
+                            <constraint firstItem="WUs-AE-jxf" firstAttribute="trailing" secondItem="hff-YJ-DAK" secondAttribute="trailingMargin" id="LcP-PM-xIQ"/>
+                            <constraint firstItem="ZHE-LA-Lrd" firstAttribute="height" secondItem="OCW-NA-voH" secondAttribute="height" id="MnU-2i-qiF"/>
                             <constraint firstItem="zbx-F2-7CD" firstAttribute="top" secondItem="HfV-ZL-tLJ" secondAttribute="bottom" constant="27" id="OQx-df-vY7"/>
                             <constraint firstItem="Rc6-Fc-DiB" firstAttribute="height" secondItem="rwE-zz-1bW" secondAttribute="height" id="Piv-oJ-09i"/>
+                            <constraint firstItem="ZZx-sB-4lR" firstAttribute="top" secondItem="zbx-F2-7CD" secondAttribute="bottom" constant="14" id="Scv-SX-kVk"/>
                             <constraint firstItem="Rc6-Fc-DiB" firstAttribute="width" secondItem="rwE-zz-1bW" secondAttribute="width" id="Tqh-OK-nKb"/>
+                            <constraint firstItem="WUs-AE-jxf" firstAttribute="leading" secondItem="ZHE-LA-Lrd" secondAttribute="trailing" constant="8" id="Tto-If-idj"/>
                             <constraint firstItem="Rc6-Fc-DiB" firstAttribute="centerY" secondItem="rwE-zz-1bW" secondAttribute="centerY" id="ch0-0o-e0o"/>
+                            <constraint firstItem="ZZx-sB-4lR" firstAttribute="trailing" secondItem="hff-YJ-DAK" secondAttribute="trailingMargin" id="cnD-eC-uvY"/>
+                            <constraint firstItem="WUs-AE-jxf" firstAttribute="height" secondItem="ZZx-sB-4lR" secondAttribute="height" id="hVq-cs-yCj"/>
                             <constraint firstItem="rwE-zz-1bW" firstAttribute="centerX" secondItem="hff-YJ-DAK" secondAttribute="centerX" id="iJu-He-CkW"/>
+                            <constraint firstItem="ZHE-LA-Lrd" firstAttribute="width" secondItem="OCW-NA-voH" secondAttribute="width" id="rFS-O1-8Eq"/>
                             <constraint firstItem="zbx-F2-7CD" firstAttribute="leading" secondItem="hff-YJ-DAK" secondAttribute="leadingMargin" id="vod-z4-Qdx"/>
+                            <constraint firstItem="ZZx-sB-4lR" firstAttribute="leading" secondItem="OCW-NA-voH" secondAttribute="trailing" constant="8" id="yOG-Ck-BTK"/>
+                            <constraint firstItem="WUs-AE-jxf" firstAttribute="top" secondItem="ZZx-sB-4lR" secondAttribute="bottom" constant="13" id="znX-gz-Bdv"/>
                         </constraints>
                     </view>
                     <connections>
