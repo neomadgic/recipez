@@ -121,34 +121,26 @@
                                             <constraint firstAttribute="height" constant="200" id="fdK-Oj-9M7"/>
                                         </constraints>
                                     </imageView>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yzN-Rr-g8B" customClass="MaterialView" customModule="recipez" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="162" width="89" height="30"/>
-                                        <color key="backgroundColor" red="0.68060897435897427" green="0.68060897435897427" blue="0.68060897435897427" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="4iA-oO-o3m"/>
-                                        </constraints>
-                                    </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qM1-Gq-kfE">
-                                        <rect key="frame" x="8" y="146" width="89" height="30"/>
+                                        <rect key="frame" x="20" y="131" width="111" height="45"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="25D-Vn-Lvj"/>
+                                            <constraint firstAttribute="height" constant="45" id="25D-Vn-Lvj"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="29"/>
                                         <color key="textColor" red="0.9678485577" green="0.9678485577" blue="0.9678485577" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="shadowOffset" width="3" height="3"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="qM1-Gq-kfE" firstAttribute="centerX" secondItem="nkl-Ni-YUb" secondAttribute="centerX" id="5HU-Bd-Gf6"/>
-                                    <constraint firstAttribute="bottom" secondItem="yzN-Rr-g8B" secondAttribute="bottom" constant="8" id="8Kk-mI-Ohh"/>
                                     <constraint firstItem="e95-FL-KlN" firstAttribute="height" secondItem="nkl-Ni-YUb" secondAttribute="height" id="AAt-TJ-6Lx"/>
-                                    <constraint firstItem="yzN-Rr-g8B" firstAttribute="centerX" secondItem="nkl-Ni-YUb" secondAttribute="centerX" id="BMY-Gt-Iak"/>
                                     <constraint firstAttribute="bottom" secondItem="qM1-Gq-kfE" secondAttribute="bottom" constant="8" id="CJP-3M-Hr9"/>
                                     <constraint firstAttribute="trailing" secondItem="e95-FL-KlN" secondAttribute="trailing" id="MJz-M1-sHe"/>
+                                    <constraint firstItem="qM1-Gq-kfE" firstAttribute="leading" secondItem="nkl-Ni-YUb" secondAttribute="leading" constant="20" id="Ofo-Ur-sZw"/>
                                     <constraint firstAttribute="height" constant="200" id="TBT-lu-F1D"/>
                                     <constraint firstItem="e95-FL-KlN" firstAttribute="width" secondItem="nkl-Ni-YUb" secondAttribute="width" id="trm-0L-NqL"/>
-                                    <constraint firstItem="yzN-Rr-g8B" firstAttribute="width" secondItem="qM1-Gq-kfE" secondAttribute="width" id="weO-FB-93m"/>
                                     <constraint firstItem="e95-FL-KlN" firstAttribute="leading" secondItem="nkl-Ni-YUb" secondAttribute="leading" id="wm0-ix-cuA"/>
                                     <constraint firstItem="e95-FL-KlN" firstAttribute="top" secondItem="nkl-Ni-YUb" secondAttribute="top" id="xAn-Ao-Wif"/>
                                 </constraints>
@@ -174,7 +166,7 @@
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fn-5J-nDA">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fn-5J-nDA" customClass="MaterialTextView" customModule="recipez" customModuleProvider="target">
                                         <rect key="frame" x="20" y="43" width="520" height="75"/>
                                         <color key="backgroundColor" red="0.9678485577" green="0.9678485577" blue="0.9678485577" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -183,12 +175,9 @@
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fi9-gL-skI">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fi9-gL-skI" customClass="MaterialTextView" customModule="recipez" customModuleProvider="target">
                                         <rect key="frame" x="20" y="161" width="520" height="139"/>
                                         <color key="backgroundColor" red="0.9678485577" green="0.9678485577" blue="0.9678485577" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="139" id="OqZ-6x-I6E"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -198,6 +187,7 @@
                                     <constraint firstAttribute="trailing" secondItem="9fn-5J-nDA" secondAttribute="trailing" constant="20" id="09a-7z-iAe"/>
                                     <constraint firstItem="9fn-5J-nDA" firstAttribute="leading" secondItem="u4r-8g-ecE" secondAttribute="leading" constant="20" id="8ep-eI-SWr"/>
                                     <constraint firstItem="Fi9-gL-skI" firstAttribute="top" secondItem="eBs-qx-jll" secondAttribute="bottom" constant="8" id="JlA-rf-Cf7"/>
+                                    <constraint firstAttribute="bottom" secondItem="Fi9-gL-skI" secondAttribute="bottom" constant="8" id="MPs-wq-PqQ"/>
                                     <constraint firstItem="voD-wa-2bE" firstAttribute="top" secondItem="u4r-8g-ecE" secondAttribute="top" constant="8" id="UjX-uR-rTG"/>
                                     <constraint firstAttribute="trailing" secondItem="Fi9-gL-skI" secondAttribute="trailing" constant="20" id="UoX-8Z-oOV"/>
                                     <constraint firstItem="voD-wa-2bE" firstAttribute="leading" secondItem="u4r-8g-ecE" secondAttribute="leading" constant="8" id="Wyb-6e-MhX"/>
@@ -222,7 +212,6 @@
                     <connections>
                         <outlet property="ingredLbl" destination="9fn-5J-nDA" id="DHb-HJ-eoN"/>
                         <outlet property="nameLbl" destination="qM1-Gq-kfE" id="BIP-5p-zsc"/>
-                        <outlet property="nameView" destination="yzN-Rr-g8B" id="27R-6f-S82"/>
                         <outlet property="recipeImg" destination="e95-FL-KlN" id="cQ0-WR-4L7"/>
                         <outlet property="stepsLbl" destination="Fi9-gL-skI" id="mns-f3-aLN"/>
                     </connections>

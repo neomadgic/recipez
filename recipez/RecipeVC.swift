@@ -15,7 +15,6 @@ class RecipeVC: UIViewController
     @IBOutlet weak var ingredLbl: UITextView!
     @IBOutlet weak var stepsLbl: UITextView!
     @IBOutlet weak var recipeImg: UIImageView!
-    @IBOutlet weak var nameView: MaterialView!
     
     var recipeName = ""
     var recipeSteps = ""
@@ -31,18 +30,14 @@ class RecipeVC: UIViewController
 
     override func viewWillAppear(animated: Bool)
     {
-
-        nameView.alpha = 0.5
         nameLbl.text = recipeName
         nameLbl.sizeToFit()
         nameLbl.alpha = 1.0
         stepsLbl.text = recipeSteps
         ingredLbl.text = recipeIngred
         recipeImg.image = UIImage(data: recipeImage)
-        ingredLbl.scrollEnabled = true
-        stepsLbl.scrollEnabled = true
         
-        ingredLbl.scrollRangeToVisible(NSMakeRange(0, 0))
+        ingredLbl.scrollRangeToVisible(NSMakeRange(0, 1))
         stepsLbl.scrollRangeToVisible(NSMakeRange(0, 1))
         
     }

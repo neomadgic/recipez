@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		760C13361CE453BC00229D37 /* MaterialTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760C13351CE453BC00229D37 /* MaterialTextView.swift */; };
 		7629E16E1CE2443E00DB25C3 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7629E16D1CE2443E00DB25C3 /* MaterialView.swift */; };
 		7659208C1C7E5DE7005F3B13 /* CreateRecipeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7659208B1C7E5DE7005F3B13 /* CreateRecipeVC.swift */; };
 		766237441C7D34B700C0BC11 /* Recipe+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766237421C7D34B700C0BC11 /* Recipe+CoreDataProperties.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		760C13351CE453BC00229D37 /* MaterialTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialTextView.swift; sourceTree = "<group>"; };
 		7629E16D1CE2443E00DB25C3 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		7659208B1C7E5DE7005F3B13 /* CreateRecipeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateRecipeVC.swift; sourceTree = "<group>"; };
 		766237421C7D34B700C0BC11 /* Recipe+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Recipe+CoreDataProperties.swift"; path = "../Recipe+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				766237421C7D34B700C0BC11 /* Recipe+CoreDataProperties.swift */,
 				766237431C7D34B700C0BC11 /* Recipe.swift */,
 				766237481C7D393600C0BC11 /* RecipeCell.swift */,
+				760C13351CE453BC00229D37 /* MaterialTextView.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				7629E16E1CE2443E00DB25C3 /* MaterialView.swift in Sources */,
 				76E0FDF21CE39FE200CD6F8B /* MaterialButton.swift in Sources */,
 				76F258DF1C7BBAB300E3ACC4 /* AppDelegate.swift in Sources */,
+				760C13361CE453BC00229D37 /* MaterialTextView.swift in Sources */,
 				766237491C7D393600C0BC11 /* RecipeCell.swift in Sources */,
 				7659208C1C7E5DE7005F3B13 /* CreateRecipeVC.swift in Sources */,
 				76F258E71C7BBAB300E3ACC4 /* recipez.xcdatamodeld in Sources */,
