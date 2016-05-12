@@ -32,7 +32,7 @@ class RecipeVC: UIViewController
     override func viewWillAppear(animated: Bool)
     {
 
-        nameView.alpha = 0.8
+        nameView.alpha = 0.5
         nameLbl.text = recipeName
         nameLbl.sizeToFit()
         nameLbl.alpha = 1.0

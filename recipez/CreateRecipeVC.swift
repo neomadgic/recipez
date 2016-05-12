@@ -47,6 +47,7 @@ class CreateRecipeVC: UIViewController, UIImagePickerControllerDelegate, UINavig
     {
         imagePicker.dismissViewControllerAnimated(true, completion: nil)
         recipeImg.image = image;
+        
     }
     
     @IBAction func addImgPressed(sender: AnyObject)
