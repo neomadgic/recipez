@@ -191,7 +191,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lMf-Zn-JNO" customClass="MaterialView" customModule="recipez" customModuleProvider="target">
                                         <rect key="frame" x="20" y="161" width="520" height="139"/>
                                         <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Fi9-gL-skI">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fi9-gL-skI">
                                                 <rect key="frame" x="8" y="8" width="504" height="123"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
@@ -363,10 +363,12 @@
                     </view>
                     <connections>
                         <outlet property="createRecipeBtn" destination="xWV-jc-tx1" id="Sjt-ZG-qMz"/>
+                        <outlet property="ingredAddBtn" destination="ZZx-sB-4lR" id="FW1-7e-IqL"/>
                         <outlet property="recipeImg" destination="rwE-zz-1bW" id="Cod-5Q-Z2J"/>
                         <outlet property="recipeIngredients" destination="OCW-NA-voH" id="MVq-AL-GeL"/>
                         <outlet property="recipeSteps" destination="ZHE-LA-Lrd" id="PjM-Cw-D5d"/>
                         <outlet property="recipeTitle" destination="zbx-F2-7CD" id="3nV-Hx-Lah"/>
+                        <outlet property="stepAddBtn" destination="WUs-AE-jxf" id="3ap-lH-4No"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B1w-rM-3C1" userLabel="First Responder" sceneMemberID="firstResponder"/>

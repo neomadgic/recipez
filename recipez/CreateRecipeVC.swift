@@ -9,14 +9,18 @@
 import UIKit
 import CoreData
 
-class CreateRecipeVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate
+class CreateRecipeVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate
 {
     @IBOutlet weak var recipeTitle: UITextField!
     @IBOutlet weak var recipeIngredients: UITextField!
     @IBOutlet weak var recipeSteps: UITextField!
     @IBOutlet weak var recipeImg: UIImageView!
     @IBOutlet weak var createRecipeBtn: UIButton!
+    @IBOutlet weak var ingredAddBtn: MaterialButton!
+    @IBOutlet weak var stepAddBtn: MaterialButton!
     
+   
+    var stepNum = 1
     var fullIngredStr = ""
     var fullStepStr = ""
     var imagePicker: UIImagePickerController!
@@ -29,6 +33,14 @@ class CreateRecipeVC: UIViewController, UIImagePickerControllerDelegate, UINavig
         imagePicker.delegate = self;
         recipeImg.layer.cornerRadius = 4.0
         recipeImg.clipsToBounds = true;
+        recipeIngredients.returnKeyType = UIReturnKeyType.Next
+
+        self.recipeIngredients.delegate = self
+        self.recipeSteps.delegate = self
+        
+        recipeIngredients.tag = 100
+        recipeSteps.tag = 101
+        
     }
 
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?)
@@ -52,7 +64,7 @@ class CreateRecipeVC: UIViewController, UIImagePickerControllerDelegate, UINavig
                 let recipe = Recipe(entity: entity, insertIntoManagedObjectContext: context)
                 recipe.title = title
                 recipe.ingredients = fullIngredStr
-                recipe.steps = recipeSteps.text
+                recipe.steps = fullStepStr
                 recipe.setRecipeImage(recipeImg.image!)
                 
                 context.insertObject(recipe)
@@ -66,12 +78,13 @@ class CreateRecipeVC: UIViewController, UIImagePickerControllerDelegate, UINavig
                     }
                 
                 self.navigationController?.popViewControllerAnimated(true)
+                stepNum = 1
             }
     }
     
     @IBAction func addIngredPressed(sender: AnyObject)
     {
-        if recipeIngredients != ""
+        if recipeIngredients.text != ""
         {
             fullIngredStr = fullIngredStr.stringByAppendingString(recipeIngredients.text!).stringByAppendingString("\n")
             recipeIngredients.text = ""
@@ -81,7 +94,36 @@ class CreateRecipeVC: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBAction func addStepPressed(sender: AnyObject)
     {
-        
+        if recipeSteps.text != "" && stepNum == 1
+            {
+                fullStepStr = fullStepStr.stringByAppendingString("\(stepNum). ").stringByAppendingString(recipeSteps.text!)
+                recipeSteps.text = ""
+                stepNum = stepNum + 1
+            }
+        if recipeSteps.text != "" && stepNum > 1
+            {
+                fullStepStr = fullStepStr.stringByAppendingString("\n").stringByAppendingString("\(stepNum). ").stringByAppendingString(recipeSteps.text!)
+                recipeSteps.text = ""
+                stepNum = stepNum + 1
+            }
     }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool
+    {
+        if textField.tag == 100
+            {
+                recipeIngredients.resignFirstResponder()
+                addIngredPressed(ingredAddBtn)
+            }
+        if textField.tag == 101
+            {
+                recipeSteps.resignFirstResponder()
+                addStepPressed(stepAddBtn)
+            }
+
+        self.view.endEditing(true)
+        return true
+    }
+    
     
 }

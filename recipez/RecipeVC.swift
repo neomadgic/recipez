@@ -26,12 +26,12 @@ class RecipeVC: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
     override func viewWillAppear(animated: Bool)
     {
+
         nameView.alpha = 0.8
         nameLbl.text = recipeName
         nameLbl.sizeToFit()
@@ -39,6 +39,11 @@ class RecipeVC: UIViewController
         stepsLbl.text = recipeSteps
         ingredLbl.text = recipeIngred
         recipeImg.image = UIImage(data: recipeImage)
+        ingredLbl.scrollEnabled = true
+        stepsLbl.scrollEnabled = true
+        
+        ingredLbl.scrollRangeToVisible(NSMakeRange(0, 0))
+        stepsLbl.scrollRangeToVisible(NSMakeRange(0, 1))
         
     }
 
