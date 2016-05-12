@@ -94,6 +94,49 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
         }
     }
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool
+    {
+        return true
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath)
+    {
+        if (editingStyle == UITableViewCellEditingStyle.Delete)
+        {
+            let app = UIApplication.sharedApplication().delegate as! AppDelegate
+            let context = app.managedObjectContext
+            let fetchRequest = NSFetchRequest()
+            let entity = NSEntityDescription.entityForName("Recipe", inManagedObjectContext: context)!
+            fetchRequest.entity = entity
+            do
+            {
+                let result = try context.executeFetchRequest(fetchRequest)
+                let recipe = result[indexPath.row]
+                context.deleteObject(recipe as! NSManagedObject)
+                
+            }
+            catch
+            {
+                let fetchError = error as NSError
+                print(fetchError)
+            }
+            do
+            {
+                try context.save()
+            }
+            catch
+            {
+                let saveError = error as NSError
+                print(saveError)
+            }
+
+            recipes.removeAtIndex(indexPath.row)
+            tableView.reloadData()
+        }
+    }
+    
+    
 
 }
 
