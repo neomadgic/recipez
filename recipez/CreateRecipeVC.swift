@@ -17,6 +17,8 @@ class CreateRecipeVC: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var recipeImg: UIImageView!
     @IBOutlet weak var createRecipeBtn: UIButton!
     
+    var fullIngredStr = ""
+    var fullStepStr = ""
     var imagePicker: UIImagePickerController!
 
     override func viewDidLoad()
@@ -49,7 +51,7 @@ class CreateRecipeVC: UIViewController, UIImagePickerControllerDelegate, UINavig
                 let entity = NSEntityDescription.entityForName("Recipe", inManagedObjectContext: context)!
                 let recipe = Recipe(entity: entity, insertIntoManagedObjectContext: context)
                 recipe.title = title
-                recipe.ingredients = recipeIngredients.text
+                recipe.ingredients = fullIngredStr
                 recipe.steps = recipeSteps.text
                 recipe.setRecipeImage(recipeImg.image!)
                 
@@ -69,6 +71,11 @@ class CreateRecipeVC: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBAction func addIngredPressed(sender: AnyObject)
     {
+        if recipeIngredients != ""
+        {
+            fullIngredStr = fullIngredStr.stringByAppendingString(recipeIngredients.text!).stringByAppendingString("\n")
+            recipeIngredients.text = ""
+        }
         
     }
     

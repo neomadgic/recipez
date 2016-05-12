@@ -163,20 +163,20 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T3R-th-0xi" customClass="MaterialView" customModule="recipez" customModuleProvider="target">
                                         <rect key="frame" x="20" y="43" width="520" height="75"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bo7-hs-95e">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fn-5J-nDA">
                                                 <rect key="frame" x="8" y="8" width="504" height="59"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.9471153846" green="0.9471153846" blue="0.9471153846" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="bo7-hs-95e" secondAttribute="bottom" constant="8" id="ChT-fb-kcK"/>
-                                            <constraint firstItem="bo7-hs-95e" firstAttribute="top" secondItem="T3R-th-0xi" secondAttribute="top" constant="8" id="PSZ-37-VOr"/>
-                                            <constraint firstItem="bo7-hs-95e" firstAttribute="leading" secondItem="T3R-th-0xi" secondAttribute="leading" constant="8" id="ZcX-3D-Tkt"/>
-                                            <constraint firstAttribute="trailing" secondItem="bo7-hs-95e" secondAttribute="trailing" constant="8" id="bcT-kc-0Ku"/>
+                                            <constraint firstAttribute="trailing" secondItem="9fn-5J-nDA" secondAttribute="trailing" constant="8" id="5bS-LU-MoZ"/>
                                             <constraint firstAttribute="height" constant="75" id="fcD-bS-HTt"/>
+                                            <constraint firstAttribute="bottom" secondItem="9fn-5J-nDA" secondAttribute="bottom" constant="8" id="gWN-nq-CU5"/>
+                                            <constraint firstItem="9fn-5J-nDA" firstAttribute="leading" secondItem="T3R-th-0xi" secondAttribute="leading" constant="8" id="oxo-OC-cOF"/>
+                                            <constraint firstItem="9fn-5J-nDA" firstAttribute="top" secondItem="T3R-th-0xi" secondAttribute="top" constant="8" id="qYg-4O-XEh"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Steps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBs-qx-jll">
@@ -191,19 +191,19 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lMf-Zn-JNO" customClass="MaterialView" customModule="recipez" customModuleProvider="target">
                                         <rect key="frame" x="20" y="161" width="520" height="139"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g3y-2z-AzH">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Fi9-gL-skI">
                                                 <rect key="frame" x="8" y="8" width="504" height="123"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.9471153846" green="0.9471153846" blue="0.9471153846" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="g3y-2z-AzH" secondAttribute="trailing" constant="8" id="Jr3-tZ-I5F"/>
-                                            <constraint firstAttribute="bottom" secondItem="g3y-2z-AzH" secondAttribute="bottom" constant="8" id="Kk5-Ib-oqg"/>
-                                            <constraint firstItem="g3y-2z-AzH" firstAttribute="leading" secondItem="lMf-Zn-JNO" secondAttribute="leading" constant="8" id="eeU-ml-66a"/>
-                                            <constraint firstItem="g3y-2z-AzH" firstAttribute="top" secondItem="lMf-Zn-JNO" secondAttribute="top" constant="8" id="xSh-ks-H8f"/>
+                                            <constraint firstAttribute="bottom" secondItem="Fi9-gL-skI" secondAttribute="bottom" constant="8" id="Aw7-6Y-Hgq"/>
+                                            <constraint firstItem="Fi9-gL-skI" firstAttribute="leading" secondItem="lMf-Zn-JNO" secondAttribute="leading" constant="8" id="Sfn-vb-rmO"/>
+                                            <constraint firstItem="Fi9-gL-skI" firstAttribute="top" secondItem="lMf-Zn-JNO" secondAttribute="top" constant="8" id="YxU-ng-TJG"/>
+                                            <constraint firstAttribute="trailing" secondItem="Fi9-gL-skI" secondAttribute="trailing" constant="8" id="dQy-Cz-Gyh"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -235,11 +235,11 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="ingredLbl" destination="bo7-hs-95e" id="grc-vG-cnd"/>
+                        <outlet property="ingredLbl" destination="9fn-5J-nDA" id="DHb-HJ-eoN"/>
                         <outlet property="nameLbl" destination="qM1-Gq-kfE" id="BIP-5p-zsc"/>
                         <outlet property="nameView" destination="yzN-Rr-g8B" id="27R-6f-S82"/>
                         <outlet property="recipeImg" destination="e95-FL-KlN" id="cQ0-WR-4L7"/>
-                        <outlet property="stepsLbl" destination="g3y-2z-AzH" id="oM0-Np-hHf"/>
+                        <outlet property="stepsLbl" destination="Fi9-gL-skI" id="mns-f3-aLN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pni-1C-Nxu" userLabel="First Responder" sceneMemberID="firstResponder"/>

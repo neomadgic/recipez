@@ -12,8 +12,8 @@ class RecipeVC: UIViewController
 {
 
     @IBOutlet weak var nameLbl: UILabel!
-    @IBOutlet weak var stepsLbl: UILabel!
-    @IBOutlet weak var ingredLbl: UILabel!
+    @IBOutlet weak var ingredLbl: UITextView!
+    @IBOutlet weak var stepsLbl: UITextView!
     @IBOutlet weak var recipeImg: UIImageView!
     @IBOutlet weak var nameView: MaterialView!
     
