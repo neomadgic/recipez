@@ -86,8 +86,17 @@ class CreateRecipeVC: UIViewController, UIImagePickerControllerDelegate, UINavig
     {
         if recipeIngredients.text != ""
         {
-            fullIngredStr = fullIngredStr.stringByAppendingString(recipeIngredients.text!).stringByAppendingString("\n")
-            recipeIngredients.text = ""
+            if fullIngredStr == ""
+                {
+                    fullIngredStr = fullIngredStr.stringByAppendingString(recipeIngredients.text!)
+                    recipeIngredients.text = ""
+                }
+            else
+                {
+                    fullIngredStr = fullIngredStr.stringByAppendingString("\n").stringByAppendingString(recipeIngredients.text!)
+                    recipeIngredients.text = ""
+                }
+
         }
         
     }
